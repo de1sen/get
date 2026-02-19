@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import
+import time
 
 led = 26
 duty = 0.0

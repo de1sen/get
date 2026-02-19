@@ -28,6 +28,6 @@ while True:
     if num < 0 or num == 256:
         break
     GPIO.output(leds, dec2bin(num))
-if GPIO.input(9) and GPIO.input(10):
+    if GPIO.input(9) and GPIO.input(10):
         num = 256
         print(num, dec2bin(num))

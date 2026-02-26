@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 
+
 class R2R_DAC:
     def __init__(self, gpio_bits, dynamic_range, verbose = False):
         self.gpio_bits = gpio_bits

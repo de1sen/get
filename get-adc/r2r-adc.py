@@ -53,7 +53,7 @@ if __name__ == "__main__":
         adc = R2R_ADC(dynamic_range=dac_range, verbose=False) 
 
         while True:
-           voltage = adc.get_sc_voltage
+           voltage = adc.get_sc_voltage()           
            print(f"Напряжение: {voltage:.3f} В")
            time.sleep(0.5) 
 

@@ -1,10 +1,10 @@
 import time 
-import adc_plot
-import r2r_adc
+import adc_plot as plot
+import r2r_adc as adc
 
 dac_range = 3.183
 
-adc = R2R_ADC(dynamic_range = dac_range, compare_time = 0.0001, verbose = False)
+adc = adc.R2R_ADC(dynamic_range = dac_range, compare_time = 0.0001, verbose = False)
 
 voltage_values = []
 time_values = []
@@ -26,7 +26,7 @@ try:
         time.sleep(0.05)
 
         if voltage_values and time_values:
-            plot_voltage_vs_time(time_values, voltage_values, max_voltage=dac_range)
+            plot.plot_voltage_vs_time(time_values, voltage_values, max_voltage=dac_range)
         
 finally:
     adc.deinit()
